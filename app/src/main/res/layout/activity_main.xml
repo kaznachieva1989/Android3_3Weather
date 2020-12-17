@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <ImageView
+        android:id="@+id/base_picture"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/base_picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/city_Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/base_picture"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/current_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city_Name"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/current_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city_Name"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/sunny"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_sunny"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/base_picture" />
+
+    <TextView
+        android:id="@+id/text_sunny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/ic_sunny"
+        android:text="Sunny"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sunny" />
+
+    <TextView
+        android:id="@+id/gradus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:text="33°C"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/sunny"
+        app:layout_constraintTop_toBottomOf="@+id/base_picture" />
+
+    <TextView
+        android:id="@+id/max_mean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:text="35°C"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/base_picture" />
+
+    <TextView
+        android:id="@+id/min_mean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        android:text="35°C"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/max_mean" />
+
+    <ImageView
+        android:id="@+id/humidity"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_humidity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sunny" />
+
+    <TextView
+        android:id="@+id/text_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:text="49%"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidity" />
+
+    <TextView
+        android:id="@+id/text_underUnderHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="3dp"
+        android:text="Humidity"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_humidity" />
+
+
+    <ImageView
+        android:id="@+id/speed"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_speed"
+        app:layout_constraintStart_toStartOf="@+id/humidity"
+        app:layout_constraintTop_toBottomOf="@+id/gradus" />
+
+    <TextView
+        android:id="@+id/text_underSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="5dp"
+        android:text="1,007mBar"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/text_humidity"
+        app:layout_constraintTop_toBottomOf="@+id/speed" />
+
+
+    <TextView
+        android:id="@+id/text_underUnderSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="1dp"
+        android:text="Pressure"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@id/text_humidity"
+        app:layout_constraintTop_toBottomOf="@+id/text_underSpeed" />
+    />
+
+
+    <ImageView
+        android:id="@+id/wind_pic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="35dp"
+        android:src="@drawable/ic_wind_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/min_mean" />
+
+    <TextView
+        android:id="@+id/text_underWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:text="23km/h"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wind_pic" />
+
+    <TextView
+        android:id="@+id/text_underUnderWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="50dp"
+        android:text="Wind"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_underWind" />
+
+    <ImageView
+        android:id="@+id/sunset"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_sunset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_underUnderHumidity" />
+
+    <TextView
+        android:id="@+id/text_sunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:text="6:03 AM"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sunset" />
+
+    <TextView
+        android:id="@+id/text_underUnderSunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="3dp"
+        android:text="Sunset"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_sunset" />
+
+    <ImageView
+        android:id="@+id/sunrise"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/ic_sunrise"
+        app:layout_constraintStart_toStartOf="@+id/sunset"
+        app:layout_constraintTop_toBottomOf="@+id/text_underUnderSpeed" />
+
+    <TextView
+        android:id="@+id/text_underSunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="5dp"
+        android:text="7:05 PM"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/text_sunset"
+        app:layout_constraintTop_toBottomOf="@+id/sunrise" />
+
+    <TextView
+        android:id="@+id/text_underUnderSunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="3dp"
+        android:text="Sunrise"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_underSunrise" />
+
+    <ImageView
+        android:id="@+id/sand_clock_pic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="35dp"
+        android:src="@drawable/ic_sand_clock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_underUnderWind" />
+
+    <TextView
+        android:id="@+id/text_underClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:text="13h 1m"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sand_clock_pic" />
+
+    <TextView
+        android:id="@+id/text_underUnderClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="35dp"
+        android:text="Daytime"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_underClock" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
